@@ -1,0 +1,17 @@
+<%- include header.ejs %>
+<hr/>
+<div class="row">
+	<a class="btn btn-primary btn-sm" href="/customers">Back To List</a>
+</div>
+<br/>
+<div class="row">
+	<form role="form" method="POST" action="/customers/add">
+	  	<div class="form-group">
+	    	<label for="customer_name">Name:</label>
+	    	<input type="text" class="form-control" id="customer_name" name="customer_name">
+	  	</div>
+	  	
+	  	<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
+<%- include footer.ejs %>
