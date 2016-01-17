@@ -1,0 +1,21 @@
+{
+  "name": "nodejscrud",
+  "version": "1.0.0",
+  "description": "A simple CRUD application with MYSQL databse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "browser-logger": "^1.0.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-myconnection": "^1.0.4",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "mysql": "^2.10.2"
+  }
+}
