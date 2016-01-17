@@ -1,0 +1,34 @@
+<%- include header.ejs %>
+<hr/>
+<div class="row">
+	<a class="btn btn-primary btn-sm" href="/customers/add">Add Customer</a>
+</div>
+<div class="row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Customer Name</th>
+				<th>Operations</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+			if ( data.length ) {
+				data.forEach(function( e, i ){
+			%>
+			<tr>
+				<td><%=(i+1)%></td>
+				<td><%= e.customer_name %></td>
+				<td>
+					<a href="/customers/edit/<%= e.customer_id %>" class="btn btn-warning">Edit</a>
+					<a href="/customers/<%= e.customer_id %>?_method=DELETE" class="btn btn-danger" onclick="return confirm('Sre you sure to delete this ??');">Delete</a>
+				</td>
+			</tr>
+			<% 	});
+			} 
+			%>
+		</tbody>
+	</table>
+</div>
+<%- include footer.ejs %>
