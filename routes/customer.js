@@ -36,5 +36,12 @@ exports.addData = function ( req, res, next ) {
 }
 
 exports.deleteData = function ( req, res, next ) {
-	console.log( req.params.id )
+	
+	var id =  req.params.id;
+	req.getConnection( function ( err, conn ) {
+		conn.query( 'DELETE FROM customers WHERE customer_id = ? ', id, function () {
+			res.redirect('/customers');
+		});
+	});
+	
 }

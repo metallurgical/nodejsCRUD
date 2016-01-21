@@ -29,7 +29,7 @@ app.use( bodyParser.urlencoded( { extended: true } ));
     return method;
   }
 }))*/
-app.use(methodOverride('X-HTTP-Method-Override', "DELETE"))
+//app.use(methodOverride('X-HTTP-Method-Override', "DELETE"))
 
 // serve static file like css, js, plugins
 app.use( '/static', express.static( __dirname + '/public') );
